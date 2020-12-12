@@ -1,0 +1,460 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/*Header*/
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link  {
+  cursor: pointer;
+}
+
+#search {
+  color: white;
+  background-color: #0069D9;
+}
+
+#Categories img:hover {
+  margin-left: 0 40 px;
+  transform: scale(1.1,1.1);
+  cursor: pointer;
+}
+
+
+#movies-searchable {
+  margin-top: 20px;
+}
+
+.navbar-brand {
+  
+  text-transform: uppercase;
+  /*JD*/
+  /*background-color: red;*/
+  color: red !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav-link {
+  
+  /*JD*/
+  /*background-color:white;*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  color: rgb(228, 4, 4);
+}
+.content {
+  border: 1px solid red;
+  display: none;
+}
+
+.content div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+}
+.container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.movie {
+  margin-top: 50px;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+}
+
+section img {
+  width: 300px;
+
+}
+.content-display {
+  display: block;
+}
+
+/* video header */
+
+.overlay {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overlay video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.overlay .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .overlay {
+    background: url('https://s184.convertio.me/p/aSUWJuJlZysbsX8i6iWV9w/5b203af11ae4dbb5ef95bc1578a5b1bc/y2mate.com-FAST-AND-FURIOUS-9-Trailer-_2020___qyw6LC5pnE_1080p.mp4/1600x900') black no-repeat center center scroll;
+  }
+  .overlay video {
+    display: none;
+  }
+}
+
+
+
+
+/*Nav bar*/
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: white !important;
+}
+
+/*Slider*/
+
+#slides{
+  position: relative;
+  height: 400px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+
+  font-size: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+}
+
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+
+
+.slide:nth-of-type(1){
+  background: red;
+}
+.slide:nth-of-type(2){
+  background: orange;
+}
+.slide:nth-of-type(3){
+  background: green;
+}
+.slide:nth-of-type(4){
+  background: blue;
+}
+.slide:nth-of-type(5){
+  background: purple;
+}
+
+
+/*Container*/
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;  
+  padding-bottom: 25px;
+  margin: 0;
+  list-style: none;
+
+}
+
+.flex-item {  
+  padding: 5px;
+  width: 170px;
+  height: 300px;  
+  margin: 5px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  
+}
+
+.flex-title-item {   
+  width: 300px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  line-height: 15px;  
+  font-weight: bold;
+  font-size: 2em;
+  text-align: left;
+  flex-grow: 1;
+  margin-left: 3%;
+
+}
+
+
+
+.flex-movie-poster {      
+  font-size: 2em;
+  text-align: left;
+  flex-grow: 1;
+  margin-left: 3%;
+  color: black;
+
+}
+
+.flex-movie-information {    
+  font-size: 2em;
+  text-align: left;
+  flex-grow: 1;
+  margin-left: 3%;
+  color: black;
+
+}
+
+
+.flex-item img{
+  width: 170px;
+  height: 300px;
+}
+
+
+.movie-information {       
+  font-size: 1em;
+  text-align: left;
+  flex-grow: 1;  
+  color: black;
+
+}
+
+/*Movie Detail*/
+.movie-container {
+  margin: 20px 20px 0 0;    
+  overflow: auto
+}
+.movie-thumb {
+  float: left
+}
+.movie-thumb img {
+  display: block  ;
+  margin-right: 15px;
+}
+
+.v-content {
+  margin-left: 210px
+}
+.movie-title {
+  font-weight: bold;
+  font-size: 200%;
+  padding: 9px;
+  background: #ccc
+}
+
+
+
+/*Footer*/
+
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+background: #151414;
+position: relative;
+}
+.footer-cta {
+border-bottom: 1px solid #373636;
+}
+.single-cta i {
+color: #ff5e14;
+font-size: 30px;
+float: left;
+margin-top: 8px;
+}
+.cta-text {
+padding-left: 15px;
+display: inline-block;
+}
+.cta-text h4 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 2px;
+}
+.cta-text span {
+color: #757575;
+font-size: 15px;
+}
+.footer-content {
+position: relative;
+z-index: 2;
+}
+.footer-pattern img {
+position: absolute;
+top: 0;
+left: 0;
+height: 330px;
+background-size: cover;
+background-position: 100% 100%;
+}
+.footer-logo {
+margin-bottom: 30px;
+}
+.footer-logo img {
+  max-width: 200px;
+}
+.footer-text p {
+margin-bottom: 14px;
+font-size: 14px;
+    color: #7e7e7e;
+line-height: 28px;
+}
+.footer-social-icon span {
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+margin-bottom: 20px;
+}
+.footer-social-icon a {
+color: #fff;
+font-size: 16px;
+margin-right: 15px;
+}
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.facebook-bg{
+background: #3B5998;
+}
+.twitter-bg{
+background: #55ACEE;
+}
+.google-bg{
+background: #DD4B39;
+}
+.footer-widget-heading h3 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 40px;
+position: relative;
+}
+.footer-widget-heading h3::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: -15px;
+height: 2px;
+width: 50px;
+background: #ff5e14;
+}
+.footer-widget ul li {
+display: inline-block;
+float: left;
+width: 50%;
+margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+color: #ff5e14;
+}
+.footer-widget ul li a {
+color: #878787;
+text-transform: capitalize;
+}
+.subscribe-form {
+position: relative;
+overflow: hidden;
+}
+.subscribe-form input {
+width: 100%;
+padding: 14px 28px;
+background: #2E2E2E;
+border: 1px solid #2E2E2E;
+color: #fff;
+}
+.subscribe-form button {
+  position: absolute;
+  right: 0;
+  background: #ff5e14;
+  padding: 13px 20px;
+  border: 1px solid #ff5e14;
+  top: 0;
+}
+.subscribe-form button i {
+color: #fff;
+font-size: 22px;
+transform: rotate(-6deg);
+}
+.copyright-area{
+background: #202020;
+padding: 25px 0;
+}
+.copyright-text p {
+margin: 0;
+font-size: 14px;
+color: #878787;
+}
+.copyright-text p a{
+color: #ff5e14;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+.footer-menu li:hover a{
+color: #ff5e14;
+}
+.footer-menu li a {
+font-size: 14px;
+color: #878787;
+}

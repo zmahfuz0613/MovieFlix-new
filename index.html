@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <title>Movieflix</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" id="MovieFlixMenu">Movieflix</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" id="NowPlaying">Now Playing</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" id="PopularMenu">Popular</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" id="TopMenu">Top Rated</a>
+          </li>
+        </ul>
+
+        <form>
+          <div class="form-group">
+            <input type="search" placeholder="Search" id="inputValue">
+            <button type="submit" id="search">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <div class="overlay">
+    <video playsinline="playsinline" autoplay="autoplay" preload='mute' loop="loop">
+      <source src="y2mate.com-FAST-AND-FURIOUS-9-Trailer-_2020___qyw6LC5pnE_1080p.mp4" type="mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="Categories">
+  </div>
+  <div id="MovieDetail" class="container">
+    <button type='button' style='background-color:#0069D9; color:white; margin-bottom: 5px; float:left'
+      onclick="getAllMovies()">View all movies</button>
+    <ul class="flex-container">
+      <div class="movie-container">
+        <div id="MovieDetailPoster"></div>
+        <div id="MovieDetailInformation"></div>
+      </div>
+      <div id="MovieDetailTrailers"></div>
+    </ul>
+  </div>
+
+
+
+  <!-- <footer class="footer">Footer </footer> -->
+
+
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Find us</h4>
+                <span>133 N Clifton, Great bend, KS 67208</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Call us</h4>
+                <span>316-227-76543</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Mail us</h4>
+                <span>mail@movieflix.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-text">
+                <p>Movieflix</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Media center</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Cookie Preference</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"> Terms of use</a></li>
+                <li><a href="#">Legal Notice</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Create an account</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>Create an account and subscribe to our offers and promotions.</p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  <input type="text" placeholder="Email Address">
+                  <button><i class="fab fa-telegram-plane">Submit</i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>Copyright &copy; 2020, All Right Reserved <a href="#">Zunayed Mahfuz</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/apis.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+
+</html>
